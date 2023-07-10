@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+.carousel-container {
+  position: relative;
+  height: 400px; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+}
+
+.carimage {
+  flex: 1;
+}
+
+.cardescription {
+  flex: 1;
+  text-align: center;
+}
+
+h3, p {
+  margin: 0;
+}
+
+.custom-nav {
+ 
+  
+  transform: translateY(-50%);
+  display:flex;
+  justify-content:center;
+  flex-direction:
+}
+
+.prev-btn,
+.next-btn {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+</style>
+<body>
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-item">
+        <div class="carimage">
+          <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg " style = "width:100%; height:100%;" alt="Image 1">
+        </div>
+        <div class="cardescription">
+          <h3>Description 1</h3>
+          <p>Here is the description of the first item.</p>
+        </div>
+      </div>
+      
+      <div class="carousel-item">
+        <div class="carimage">
+          <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" style = "width:100%; height:100%" alt="Image 2">
+        </div>
+        <div class="cardescription">
+          <h3>Description 2</h3>
+          <p>Here is the description of the second item.</p>
+        </div>
+      </div>
+      
+      <!-- Add more carousel items as needed -->
+    </div>
+    
+    
+  </div>
+  
+  <div class="custom-nav " style = "text-align:center; margin-top:30px;">
+    <button class="prev-btn" style = "margin-right:10px;">pre</button>
+    <button class="next-btn">nxt</button>
+  </div>
+
+  <script type = "text/javascript">
+
+document.addEventListener("DOMContentLoaded", function() {
+  const carousel = document.querySelector(".carousel");
+  const carouselItems = Array.from(document.querySelectorAll(".carousel-item"));
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+  const carouselHeight = carouselItems[0].offsetHeight;
+  let currentIndex = 0;
+
+  function goToSlide(index) {
+    if (index < 0 || index >= carouselItems.length) return;
+    carousel.style.transform = `translateY(-${index * carouselHeight}px)`;
+    currentIndex = index;
+  }
+
+  function goToPrevSlide() {
+    goToSlide(currentIndex - 1);
+  }
+
+  function goToNextSlide() {
+    goToSlide(currentIndex + 1);
+  }
+
+  prevBtn.addEventListener("click", goToPrevSlide);
+  nextBtn.addEventListener("click", goToNextSlide);
+});
+
+  </script>
+</body>
+</html>

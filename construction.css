@@ -1,0 +1,209 @@
+.constructionlogo{
+    width:110px;
+}
+
+@media(max-width:767px){
+    .constructionlogo{
+        width:70px;
+    }
+}
+
+#id1, #id2, #id5, #id6, #id7, #id8, #navbarDropdown, #id9, #id10{
+    color:#4D4D4D;
+    font-weight:bold;
+    font-size:20px;
+}
+
+#id3, #id4{
+    color:white;
+}
+
+.image-container{
+    background-image:url("https://i.pinimg.com/originals/2f/d3/48/2fd348b3a8ec6e63145413c575e026e9.jpg");
+    height:80vh;
+    background-size:cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+@media(max-width:576px){
+    .font{
+       font-size:20px;
+       font-weight:bold;
+    }
+}
+
+
+
+.machinary{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+    margin-bottom:20px;
+    border-radius:30px;
+}
+.button:hover{
+    background-color:#ffd93d;
+}
+
+
+
+.gallery img {
+    transition: transform 0.5s;
+}
+
+.gallery img:hover {
+   
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.text-reveal {
+    white-space: pre;
+    overflow: hidden;
+    animation: revealText 3s linear;
+  }
+  
+  @keyframes revealText {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }
+
+  .typing {
+    white-space: pre-wrap; /* Allows line breaks in the text */
+    overflow: hidden;
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0; }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+.forms{
+    border-style:solid;
+    border-color:black;
+    width:100%;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    
+    
+    background-color:#f9f3df;
+    margin-bottom:30px;
+ 
+ }
+  
+ .owl-prev,
+.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  color: #1e2f97;
+  font-size: 24px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.owl-prev {
+  left: 10px;
+}
+
+.owl-next {
+  right: 10px;
+}
+
+.project img {
+    transition: transform 0.5s;
+}
+.project img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.dropdown:hover .dropdown-menu{
+    display:block;
+}
+
+.dropdown-menu{
+    background-color:#1e2f97;
+}
+
+
+.hover-image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hover-image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s ease;
+  }
+  
+  .overlay .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .hover-image-container:hover .overlay {
+    opacity: 1;
+  }
+
+  hr{
+    color:black;
+    
+    width:50px;
+    
+  }
+
+  .carbtn{
+    border-width:opx;
+    background-color:transparent;
+  }
+
+  .hvr:hover{
+    background-color:#f9f3df;
+    border-width:0px !important;
+  }
+
+
+
+  .hvr {
+    transition: transform 0.5s;
+}
+.hvr:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+}
